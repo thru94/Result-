@@ -7,7 +7,7 @@
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
-      background: #FFFFE0;
+      background: #ADFF2F;
     }
     .container {
       max-width: 400px;
@@ -35,7 +35,7 @@
 <body>
 
   <div class="container">
-    <h2>exam ID Checker</h2>
+    <h2>O/L ID Checker</h2>
     <input type="text" id="gameId" placeholder="Enter your ID (e.g., 2008xxxx)">
     <button onclick="checkResult()">Check Result</button>
 
@@ -44,7 +44,7 @@
       <strong>Result:</strong> <span id="resultDisplay">Loading result...</span>
     </div>
 
-    <h3>SHEZZ😊</h3>
+    <h3>Just For Fun 😊</h3>
     <input type="text" id="name" placeholder="Your name">
     <textarea id="comment" placeholder="Your comment"></textarea>
     <button onclick="submitComment()">Add Comment</button>
@@ -52,13 +52,13 @@
 
   <script>
     function checkResult() {
-      const id = document.getElementById('Id').value;
+      const id = document.getElementById('gameId').value;
       if (id === "") {
         alert("Please enter your ID");
         return;
       }
       document.getElementById('idDisplay').innerText = id;
-      document.getElementById('resultDisplay').innerText = "oya pass rththran baya venna epa! 🎉"; // dummy result
+      document.getElementById('resultDisplay').innerText = "ඔයා pass වෙනවා ලත්තන ළමයෝ බොරුවට බය වෙන්න එපා❤️‍🩹✨"; // dummy result
       document.getElementById('popup').style.display = 'block';
     }
 
