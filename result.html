@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Result Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+    #popup {
+      display: none;
+      background: #e0ffe0;
+      padding: 15px;
+      margin-top: 10px;
+      border: 1px solid #00aa00;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>exam ID Checker</h2>
+    <input type="text" id="gameId" placeholder="Enter your ID (e.g., 2008xxxx)">
+    <button onclick="checkResult()">Check Result</button>
+
+    <div id="popup">
+      <strong>Game ID:</strong> <span id="idDisplay"></span><br>
+      <strong>Result:</strong> <span id="resultDisplay">Loading result...</span>
+    </div>
+
+    <h3>SHEZZ😊</h3>
+    <input type="text" id="name" placeholder="Your name">
+    <textarea id="comment" placeholder="Your comment"></textarea>
+    <button onclick="submitComment()">Add Comment</button>
+  </div>
+
+  <script>
+    function checkResult() {
+      const id = document.getElementById('Id').value;
+      if (id === "") {
+        alert("Please enter your ID");
+        return;
+      }
+      document.getElementById('idDisplay').innerText = id;
+      document.getElementById('resultDisplay').innerText = "oya pass rththran baya venna epa! 🎉"; // dummy result
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function submitComment() {
+      const name = document.getElementById('name').value;
+      const comment = document.getElementById('comment').value;
+      if (!name || !comment) {
+        alert("Please fill both name and comment!");
+        return;
+      }
+      alert(`Thanks, ${name}, for your comment!\n\n"${comment}"`);
+    }
+  </script>
+
+</body>
+</html>
